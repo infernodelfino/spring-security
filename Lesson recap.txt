@@ -1,0 +1,30 @@
+1, create user, encodePassword and save to DB.
+dependencies: Web, Security, Jpa, MySQL
+config
+	- ProjectConfig
+controller
+	- HelloController
+entities
+	- User
+service
+	- UserService
+repository
+	- UserRepository
+security
+	- SecurityUser
+
+2, save user using Jdbc:
+dependencies: Web, Security, Jdbc, MySQL
+config
+	- ProjectConfig
+		+ DataSource()
+		+ PasswordEncoder()
+		+ JdbcUserDetailsManager()
+		+ configure(HttpSecurity)
+controller
+	- HelloController
+		+ @PostMapping saveUser("/user")
+entities
+	- Users
+security
+	- SecurityUser implements UserDetailsService
