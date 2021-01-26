@@ -29,6 +29,7 @@ public class Dad {
     }
 
     public static void changeObject(Dad d) {
+        d.setId(3);
         d = null;
     }
 }
