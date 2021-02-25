@@ -37,8 +37,7 @@ public class CustomAuthenticationProvider
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         if (userDetails != null) {
             if (passwordEncoder.matches(password, userDetails.getPassword())) {
-                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(username, password, userDetails.getAuthorities());
-                return usernamePasswordAuthenticationToken;
+                return new UsernamePasswordAuthenticationToken(username, password, userDetails.getAuthorities());
             }
         }
 

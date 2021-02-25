@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringSecurityLesson02RedoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityLesson02RedoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringSecurityLesson02RedoApplication.class, args);
+    }
 
 }

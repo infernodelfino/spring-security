@@ -1,0 +1,14 @@
+1, Dependency: Web, Security, MySQL, JPA, Thymeleaf
+2, Table: user m-n role
+	- user:
+		id
+		email
+		first_name
+		last_name
+		password
+	- role:
+		id
+		name
+		
+
+		
